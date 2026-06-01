@@ -1,0 +1,16 @@
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+chromadb
+beautifulsoup4
+requests
+pypdf
+tiktoken
+markdown
+python-dotenv
+ipykernel
+jupyter

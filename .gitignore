@@ -1,0 +1,65 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.ruff_cache/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Vector databases / embeddings (if generated locally)
+chroma_langchain_db/
+chromadb/
+vectorstore/
+faiss_index/
+*.faiss
+*.pkl
+
+# Temporary files
+tmp/
+temp/
+
+# Secrets
+*.pem
+*.key
+*.crt
