@@ -1,6 +1,7 @@
 langchain
 langchain-core
 langchain-community
+langchain-classic
 langchain-google-genai
 langchain-chroma
 langchain-huggingface
@@ -14,3 +15,4 @@ markdown
 python-dotenv
 ipykernel
 jupyter
+rank_bm25
