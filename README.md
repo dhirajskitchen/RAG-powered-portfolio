@@ -35,8 +35,8 @@ This repository contains a Retrieval-Augmented Generation (RAG) proof-of-concept
 1. Create and activate a Python virtual environment.
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+python -m venv venv
+venv\Scripts\Activate.ps1
 ```
 
 2. Install dependencies.
@@ -46,7 +46,13 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-3. Create or update `.env` with your Gemini API key.
+3. Optional: install BM25 support if you plan to run hybrid retrieval experiments.
+
+```powershell
+python -m pip install rank_bm25
+```
+
+4. Create or update `.env` with your Gemini API key.
 
 ```env
 GEMINI_API_KEY=your_api_key_here
@@ -80,6 +86,8 @@ Open `RAG/pipeline.ipynb` to explore additional workflow steps, including:
 - hybrid retrieval with BM25 plus vector search
 - using Google Gemini for generation
 - saving and persisting vector embeddings
+
+> Note: the notebook uses `rank_bm25` for BM25 retrieval experiments, so install it if you want to run that section.
 
 ## Notes
 
