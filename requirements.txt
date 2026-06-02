@@ -5,6 +5,7 @@ langchain-classic
 langchain-google-genai
 langchain-chroma
 langchain-huggingface
+langchain-cohere
 sentence-transformers
 chromadb
 beautifulsoup4
@@ -16,3 +17,4 @@ python-dotenv
 ipykernel
 jupyter
 rank_bm25
+cohere
