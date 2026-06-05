@@ -5,6 +5,7 @@ langchain-classic
 langchain-google-genai
 langchain-chroma
 langchain-huggingface
+langchain-ollama
 sentence-transformers
 chromadb
 beautifulsoup4
