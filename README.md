@@ -97,3 +97,20 @@ Open `RAG/pipeline.ipynb` to explore additional workflow steps, including:
 ## License
 
 This repository does not include a license file. Add one if you want to share or publish the project.
+
+## Chatbot API (`rag_api/`)
+
+Lightweight, citation-grounded endpoint meant to be called from another website. Uses in-memory BM25 retrieval (no torch/vector DB) and a single free-tier LLM call (Gemini `gemini-2.5-flash-lite`, optional Groq fallback).
+
+```powershell
+pip install -r requirements-api.txt
+uvicorn rag_api.app:app --host 0.0.0.0 --port 8000
+```
+
+Env vars (`.env`): `GEMINI_API_KEY` (required unless `GROQ_API_KEY` is set), `GROQ_API_KEY` (optional fallback), `ALLOWED_ORIGINS` (comma-separated, e.g. `https://yoursite.com`; default `*`), `RATE_LIMIT_PER_MIN` (default 15).
+
+`POST /api/chat` with `{"message": "...", "history": [{"role": "user"|"assistant", "content": "..."}]}` returns `{"reply", "citations": [{"id","source","section","snippet"}], "grounded"}`. `GET /api/health` for checks.
+
+```js
+const r = await fetch("https://YOUR-HOST/api/chat", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({message, history})});
+```
