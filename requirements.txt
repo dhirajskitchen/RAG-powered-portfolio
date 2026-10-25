@@ -18,3 +18,9 @@ python-dotenv
 ipykernel
 jupyter
 rank_bm25
+fastapi
+uvicorn
+rank_bm25
+google-genai
+openai
+python-dotenv
